@@ -1,0 +1,43 @@
+============================================================
+  ShopPrime — Flash Sale Concurrency Test
+============================================================
+  Product ID    : 1
+  Stock Before  : 10  (timestamp: 2026-05-04T22:43:51.534551+00:00Z)
+  Concurrent Users: 50
+  Each user wants : 1 unit
+============================================================
+
+
+Results  (timestamp: 2026-05-04T22:43:54.051757+00:00Z)
+------------------------------------------------------------
+  Successful purchases    : 10
+  Rejected (no stock)     : 40
+  Other errors            : 0
+  Stock BEFORE            : 10
+  Stock AFTER             : 0
+  Elapsed                 : 1.810s
+------------------------------------------------------------
+
+  [PASS] Inventory integrity verified: 10 - 10 = 0
+
+Per-thread detail (first 20):
+  Thread  1 | Customer    1 | SUCCESS
+  Thread  2 | Customer    2 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  3 | Customer    2 | SUCCESS
+  Thread  4 | Customer    3 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  5 | Customer    4 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  6 | Customer    4 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  7 | Customer    5 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  8 | Customer    5 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread  9 | Customer    6 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 10 | Customer    7 | SUCCESS
+  Thread 11 | Customer    7 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 12 | Customer    8 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 13 | Customer    9 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 14 | Customer   10 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 15 | Customer   11 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 16 | Customer   12 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 17 | Customer   13 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 18 | Customer   13 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 19 | Customer   14 | INSUFFICIENT_STOCK | Insufficient Stock
+  Thread 20 | Customer   14 | INSUFFICIENT_STOCK | Insufficient Stock
