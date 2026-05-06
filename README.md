@@ -174,7 +174,7 @@ Project-Final/
 │       ├── customers.py
 │       ├── products.py
 │       └── orders.py
-└── SUBMISSION.md                 # Grading guide & ER diagram
+
 ```
 
 ---

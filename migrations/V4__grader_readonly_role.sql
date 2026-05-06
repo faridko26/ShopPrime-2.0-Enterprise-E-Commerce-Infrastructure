@@ -25,10 +25,3 @@ GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO grader;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
     GRANT SELECT ON TABLES TO grader;
 
--- Verify: show all roles and their table privileges
--- Run this after applying to confirm setup:
---
--- SELECT grantee, table_name, privilege_type
--- FROM information_schema.role_table_grants
--- WHERE grantee = 'grader'
--- ORDER BY table_name;
