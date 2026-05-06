@@ -1,5 +1,0 @@
-PGUSER=grader
-PGPASSWORD=npg_t9XZHNbm5aEl
-
-
-psql 'postgresql://grader:npg_t9XZHNbm5aEl@ep-red-feather-anmjibi9-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
